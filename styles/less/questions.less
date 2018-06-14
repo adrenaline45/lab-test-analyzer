@@ -1,0 +1,170 @@
+.questions {
+  padding: 3.75vw 0;
+
+  &__header {
+    padding: 0 10.4vw;
+  }
+
+  &__title {
+    color: @primaryColor;
+  }
+
+  &__info {
+    width: 43.5vw;
+    margin: 1.56vw 0 3.8vw 0;
+    color: #8a8a8a;
+    line-height: 1.67;
+
+    span {
+      font-weight: 300;
+      color: @primaryColor;
+    }
+  }
+
+  &__box {
+    max-height: 5vw;
+    padding: 0 10.4vw;
+    overflow: hidden;
+    transition: 0.6s;
+  }
+
+  &__answer {
+    width: 94%;
+    margin-bottom: 2.6vw;
+    line-height: 1.67;
+    color: #8a8a8a;
+  }
+
+  &__question-box {
+    .fx-center-space-between();
+
+    h4 {
+      margin: 1.8vw 0;
+      color: #1d1d1d;
+    }
+  }
+}
+
+.toggle {
+  position: relative;
+}
+
+.close {
+  width: 1vw;
+  height: 1vw;
+  transform: rotate(45deg);
+  cursor: pointer;
+  .transition();
+
+  &:hover {
+    transform: rotate(0);
+
+    &::after,
+    &::before {
+      background-color: @secondaryColor;
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0.45vw;
+    content: " ";
+    height: 1vw;
+    width: 0.15vw;
+    background-color: #8a8a8a;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.toggle-question {
+  max-height: 50vw !important;
+  background-color: @secondaryBgColor;
+
+  h4 {
+    color: @secondaryColor;
+  }
+
+  .close {
+    transform: rotate(0);
+
+    &::after,
+    &::before {
+      background-color: @secondaryColor;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .questions {
+    padding: 50px 0;
+    &__header {
+      padding: 0 10%;
+    }
+
+    &__info {
+      width: 100%;
+    }
+
+    &__box {
+      max-height: 96px;
+      padding: 0 10%;
+    }
+
+    &__question-box {
+      h4 {
+        margin: 32px 0;
+        font-size: @medium-size-px;
+      }
+    }
+
+    &__answer {
+      margin: 32px 0;
+    }
+  }
+
+  .close {
+    width: 20px;
+    height: 20px;
+
+    &::before,
+    &::after {
+      left: 8.5px;
+      height: 20px;
+      width: 3px;
+    }
+  }
+
+  .toggle-question {
+    max-height: 300vw !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .questions {
+    &__header {
+      padding: 0 5%;
+    }
+
+    &__box {
+      padding: 0 5%;
+    }
+
+    &__question-box {
+      h4 {
+        font-size: @small-size-px;
+      }
+    }
+
+    &__answer {
+      font-size: @extra-small-size-px;
+    }
+  }
+}

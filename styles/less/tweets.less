@@ -1,0 +1,88 @@
+@cardColor: @primaryBgColor;
+
+.tweets {
+  padding: 4.3vw 10.4vw;
+  background-color: @secondaryBgColor;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .border-top-bottom();
+
+  &__card {
+    width: 49%;
+    padding: 2.1vw;
+    display: flex;
+    align-items: center;
+    background-color: @cardColor;
+    border: @splitBorder;
+    border-radius: @border-radius-vw;
+
+    &:first-child {
+      width: 100%;
+      margin-bottom: 2%;
+    }
+
+    img {
+      min-width: 6.45vw;
+      height: 6.45vw;
+    }
+
+    h4 {
+      margin-bottom: 1.2vw;
+      font-weight: @light-weight;
+      color: @primaryColor;
+    }
+
+    p {
+      color: #818a97;
+    }
+  }
+
+  &__card-info {
+    width: 90%;
+    margin-left: 1.5vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tweets {
+    padding: 50px 10%;
+
+    &__card {
+      width: 100%;
+      margin-bottom: 32px !important;
+      padding: 16px;
+      border-radius: @border-radius-px;
+
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+
+    &__card-info {
+      width: 70%;
+      margin-left: 32px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .tweets {
+    padding: 50px 5%;
+
+    &__card {
+      flex-direction: column;
+      align-items: flex-start;
+
+      img {
+        width: 20%;
+      }
+    }
+
+    &__card-info {
+      width: 100%;
+      margin: 16px 0 0 0;
+    }
+  }
+}

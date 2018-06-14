@@ -1,0 +1,72 @@
+.pipeline {
+  padding: 4.3vw 9.1vw 6.4vw 9.1vw;
+  text-align: center;
+
+  &__header {
+    color: @primaryColor;
+    margin-bottom: 4.4vw;
+  }
+
+  &__items {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    opacity: 0.5;
+  }
+
+  &__item {
+    h4 {
+      margin: 4.8vw 0 1.3vw 0;
+      font-weight: @light-weight;
+      color: @secondaryColor;
+    }
+    p {
+      width: 23vw;
+    }
+  }
+}
+
+.nurse {
+  width: 11.25vw;
+}
+
+.genes {
+  width: 7.24vw;
+}
+
+.health {
+  width: 10vw;
+}
+
+@media (max-width: 1024px) {
+  .pipeline {
+    padding: 50px 10%;
+
+    &__header {
+      margin-bottom: 70px;
+    }
+
+    &__items {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__item {
+      margin-bottom: 32px;
+
+      img {
+        width: auto;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .pipeline {
+    padding: 50px 5%;
+  }
+}

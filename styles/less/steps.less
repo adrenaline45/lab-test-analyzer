@@ -1,0 +1,212 @@
+// Step explanation
+.step {
+  &__number {
+    font-size: @extra-small-size-vw;
+    font-weight: @heavy-weight;
+    color: @stepColor;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    margin: 1.2vh 0 1.4vh 0;
+    color: @primaryColor;
+    text-transform: capitalize;
+  }
+
+  &__desc {
+    margin-bottom: 2.6vh;
+    font-weight: @light-weight;
+    color: @stepDescColor;
+    line-height: 1.5;
+  }
+}
+
+// Step one
+.step-one {
+  width: 100%;
+  height: auto;
+  padding: 14vh 0 10vh 0;
+  display: flex;
+  align-items: center;
+  background-color: @primaryBgColor;
+
+  &__logos {
+    width: 73%;
+    margin-left: -23%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    img {
+      min-width: 21vw;
+      height: 10.83vw;
+
+      &:nth-child(3) {
+        min-width: 15vw;
+      }
+    }
+  }
+
+  &__logos-opacity {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .fade-out();
+  }
+
+  &__info {
+    width: 50%;
+    padding: 0 10.6vw 0 7.8vw;
+  }
+}
+
+// Step two
+.step-two {
+  width: 100%;
+  height: auto;
+  padding: 14vh 0 10vh 0;
+  display: flex;
+  align-items: center;
+  background-color: @secondaryBgColor;
+  .border-top-bottom();
+
+  &__info {
+    width: 50%;
+    padding: 0 7.8vw 0 10.6vw;
+  }
+
+  &__cards {
+    width: 50%;
+
+    img {
+      width: 54.68vw;
+      height: auto;
+      margin-left: 3%;
+    }
+  }
+}
+
+// Step three
+.step-three {
+  width: 100%;
+  height: auto;
+  padding: 14vh 0 10vh 0;
+  display: flex;
+  align-items: center;
+  background-color: @primaryBgColor;
+
+  &__info {
+    width: 50%;
+    padding: 0 7.8vw 0 10.6vw;
+  }
+
+  &__graph {
+    width: 50%;
+
+    img {
+      width: 67.6vw;
+      height: auto;
+      margin-left: -40%;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 1024px) {
+  .step {
+    &__number {
+      font-size: @extra-small-size-px;
+    }
+  }
+
+  .step-one {
+    flex-direction: column;
+
+    &__logos {
+      width: 100%;
+      margin: 0;
+      justify-content: center;
+    }
+
+    &__info {
+      width: 80%;
+      margin-top: 50px;
+      padding: 0;
+    }
+  }
+
+  .step-two {
+    flex-direction: column-reverse;
+
+    &__info {
+      width: 80%;
+      margin-top: 50px;
+      padding: 0;
+    }
+
+    &__cards {
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 90%;
+        margin: 0;
+      }
+    }
+  }
+
+  .step-three {
+    flex-direction: column;
+
+    &__info {
+      width: 80%;
+      margin-top: 50px;
+      padding: 0;
+    }
+
+    &__graph {
+      width: 100%;
+      text-align: center;
+      
+      img {
+        width: 90%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .step {
+    &__desc {
+      font-size: @small-size-px;
+    }
+  }
+
+  .step-one {
+    padding: 50px 0;
+
+    &__info {
+      width: 90%;
+    }
+  }
+
+  .step-two {
+    padding: 50px 0;
+
+    &__info {
+      width: 90%;
+    }
+  }
+
+  .step-three {
+    padding: 50px 0;
+
+    &__info {
+      width: 90%;
+    }
+  }
+}

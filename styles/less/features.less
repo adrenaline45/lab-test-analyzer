@@ -1,0 +1,111 @@
+.features {
+  width: 100%;
+  height: auto;
+  padding: 4vw 10.4vw 5.7vw 10.4vw;
+  text-align: center;
+  background-color: @secondaryBgColor;
+  .border-top-bottom();
+
+  &__header {
+    width: 21.4vw;
+    margin: 0 auto 4.4vw auto;
+    color: @primaryColor;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__item {
+    &:nth-child(-n + 3) {
+      margin-bottom: 6.8vw;
+    }
+
+    > h4 {
+      margin: 3.7vw 0 1.3vw 0;
+      font-weight: @light-weight;
+      color: @secondaryColor;
+    }
+
+    > p {
+      width: 21.7vw;
+    }
+  }
+}
+
+.biomarkers {
+  width: 8vw;
+}
+
+.macbook {
+  width: 21.5vw;
+}
+
+.book {
+  width: 13.75vw;
+}
+
+.pdf {
+  width: 12.4vw;
+}
+
+.track {
+  width: 16vw;
+}
+
+.puzzle {
+  width: 14.68vw;
+}
+
+@media (max-width: 1024px) {
+  .features {
+    padding: 50px 10%;
+
+    &__header {
+      width: 70%;
+      margin-bottom: 70px;
+    }
+
+    &__item {
+      margin-bottom: 6.8vw;
+
+      > p {
+        width: 100%;
+      }
+    }
+  }
+
+  .biomarkers,
+  .macbook,
+  .book,
+  .pdf,
+  .track,
+  .puzzle {
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .features {
+    padding: 50px 5%;
+
+    &__header {
+      width: 90%;
+    }
+
+    &__item {
+      &:nth-child(-n + 6) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .macbook {
+    width: 100%;
+  }
+}

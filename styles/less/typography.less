@@ -1,0 +1,24 @@
+h1 { font-size: @xxl-size-vw; }
+h2 { font-size: @extra-large-size-vw }
+h3 { font-size: @large-size-vw }
+h4 { font-size: @medium-large-size-vw }
+p {
+  font-size: @medium-size-vw;
+  font-weight: @light-weight;
+}
+
+@media (max-width: 1024px) {
+  h1 { font-size: @xxl-size-px; }
+  h2 { font-size: @extra-large-size-px; }
+  h3 { font-size: @large-size-px; }
+  h4 { font-size: @medium-large-size-px; }
+  p { font-size: @medium-size-px; }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: @large-size-px; }
+  h2 { font-size: @medium-large-size-px; }
+  h3 { font-size: @medium-size-px; }
+  h4 { font-size: @medium-size-px; }
+  p { font-size: @small-size-px; }
+}

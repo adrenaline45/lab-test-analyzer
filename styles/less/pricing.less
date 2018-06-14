@@ -1,0 +1,233 @@
+@secondPlanColor: #17bebb;
+@premiumPlanColor: @secondaryColor;
+@fourthPlanColor: #f64c57;
+@cardBgColor: @secondaryBgColor;
+@cardPrimaryFontColor: #232323;
+@cardSecondaryFontColor: #8a8a8a;
+
+.pricing {
+  width: 100%;
+  height: auto;
+  padding: 8.3vh 10.4vw;
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    width: 18.6vw;
+    height: auto;
+    padding: 6.3vh 0;
+    position: relative;
+    background-color: @cardBgColor;
+    border-radius: @border-radius-vw;
+    border: @splitBorder;
+    text-align: center;
+  }
+
+  &__premium-star {
+    width: 2.1vw;
+    height: 3.2vw;
+    background: url("../../assets/images/star.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 2vh;
+    top: -1vh;
+  }
+
+  &__card-name {
+    font-weight: @normal-weight;
+    color: @cardPrimaryFontColor;
+    position: relative;
+  }
+
+  &__card-months {
+    width: 100%;
+    font-size: @small-size-vw;
+    color: @cardSecondaryFontColor;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    span {
+      font-size: @small-size-vw;
+      color: @fourthPlanColor;
+    }
+  }
+
+  &__card-price {
+    margin: 3.6vw 0 2vh 0;
+    font-size: 4.27vw;
+    font-weight: @normal-weight;
+    color: @cardPrimaryFontColor;
+
+    &::before {
+      content: "$";
+      font-size: @medium-size-vw;
+      color: @cardSecondaryFontColor;
+      vertical-align: text-top;
+    }
+  }
+
+  &__card-info {
+    font-size: @small-size-vw;
+    font-weight: @normal-weight;
+    color: @cardPrimaryFontColor;
+  }
+
+  &__card-line {
+    height: 1px;
+    margin: 4vh 3.4vw;
+    border: none;
+    background-color: #d4dadf;
+  }
+
+  &__card-body {
+    margin-bottom: 2.66vw;
+  }
+
+  &__card-benefit {
+    height: 3.42vw;;
+    font-weight: @normal-weight;
+    color: @cardSecondaryFontColor;
+  }
+
+  &__card-bottom {
+    > * {
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+
+    a {
+      font-size: @medium-size-vw;
+      font-weight: @light-weight;
+      bottom: 4.6vh;
+      cursor: pointer;
+    }
+
+    button {
+      font-size: @medium-size-vw;
+      font-weight: @light-weight;
+      bottom: 2.5vh;
+    }
+  }
+}
+
+.second-plan {
+  color: @secondPlanColor;
+}
+
+.premium-plan {
+  color: @premiumPlanColor;
+}
+
+.premium-plan-card {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px -2px 78px 4px #d4dadf;
+  -moz-box-shadow: 0px -2px 78px 4px #d4dadf;
+  box-shadow: 0px -2px 78px 4px #d4dadf;
+}
+
+.fourth-plan {
+  color: @fourthPlanColor;
+}
+
+.month::after {
+  content: "/month";
+  font-size: @medium-size-vw;
+  color: @cardSecondaryFontColor;
+}
+
+.question-mark {
+  width: 0.78vw;
+  height: 0.78vw;
+  margin: 2% 0 0 1.2%;
+  font-size: @extra-small-size-vw;
+  background-color: @cardSecondaryFontColor;
+  color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@media (max-width: 1024px) {
+  .pricing {
+    padding: 50px 10%;
+
+    &__cards {
+      justify-content: space-around
+    }
+
+    &__card {
+      width: 45%;
+      padding: 32px 0;
+      margin-bottom: 50px;
+    }
+
+    &__premium-star {
+      width: 31px;
+      height: 42px;
+    }
+
+    &__card-months {
+      font-size: @small-size-px;
+      span {
+        font-size: @small-size-px;
+      }
+    }
+
+    &__card-price {
+      font-size: 81px;
+      margin: 42px 0 18px 0;
+
+      &::before {
+        font-size: @medium-size-px;
+      }
+    }
+
+    &__card-info {
+      font-size: @small-size-px;
+    }
+
+    &__card-body {
+      margin-bottom: 70px;
+    }
+
+    &__card-benefit {
+      height: 60px;
+    }
+
+    &__card-bottom {
+      a, button {
+        font-size: @medium-size-px;
+        bottom: 12px;
+      }
+    }
+  }
+
+  .question-mark {
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+    font-size: @extra-small-size-px;
+  }
+}
+
+@media (max-width: 800px) {
+  .pricing {
+    &__card {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing {
+    padding: 50px 5%;
+
+    &__card {
+      width: 90%;
+    }
+  }
+}

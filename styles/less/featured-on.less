@@ -1,0 +1,67 @@
+.featured-on {
+  &__header {
+    width: 100%;
+    height: 2.9vw;
+    background-color: @secondaryColor;
+    .fx-center-all();
+
+    p {
+      color: #ffffff;
+    }
+  }
+
+  &__logos {
+    padding: 2.85vw 8.85vw;
+    .fx-center-space-between();
+    flex-wrap: wrap;
+  }
+}
+
+.scientific-american {
+  width: 8.75vw;
+}
+
+.ctv-news {
+  width: 6.61vw;
+}
+
+.itv {
+  width: 4.94vw;
+}
+
+.observer {
+  width: 16.14vw;
+}
+
+.pbs {
+  width: 6.875vw;
+}
+
+.yahoo {
+  width: 11vw;
+}
+
+.stat {
+  width: 9.32vw;
+}
+
+@media (max-width: 1024px) {
+  .featured-on {
+    &__header {
+      height: 56px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-on {
+    &__logos {
+      justify-content: space-around;
+
+      img {
+        width: 30vw;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

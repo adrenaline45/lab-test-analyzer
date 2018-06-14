@@ -1,0 +1,63 @@
+.team {
+  padding: 4vw 0 2.6vw 0;
+  .border-top-bottom();
+
+  &__box {
+    width: 55vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    h3 {
+      width: 31vw;
+      color: @primaryColor;
+    }
+
+    p {
+      margin: 2vw 0 1.3vw 0;
+      color: #8a8a8a;
+    }
+
+    img {
+      width: 55vw;
+      margin-bottom: 1.3vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .team {
+    padding: 50px 0 50px 0;
+
+    &__box {
+      width: 80%;
+
+      h3 {
+        width: 80%;
+      }
+
+      p {
+        margin: 40px 0 25px 0;
+      }
+
+      img {
+        width: 75vw;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .team {
+    &__box {
+      width: 90%;
+
+      h3 {
+        width: 100%;
+      }
+    }
+  }
+}

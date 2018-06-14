@@ -1,0 +1,33 @@
+.pricing-intro {
+  width: 100%;
+  height: auto;
+  padding: 8vh 27vw;
+  background-color: @secondaryColor;
+  text-align: center;
+  .border-top-bottom();
+
+  &__header {
+    margin-bottom: 3.2vw;
+    color: #ffffff;
+  }
+
+  &__text {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricing-intro {
+    padding: 50px 10%;
+
+    &__header {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-intro {
+    padding: 50px 5%;
+  }
+}
